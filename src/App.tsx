@@ -1,20 +1,14 @@
-import { useEffect } from "react"
-import { api } from "./service/api"
-import { Header } from "./components/Header"
+import { Dashboard } from "./components/Dashboard"
+import { GlobalStyles } from "./styles/global"
+import { GlobalReset } from "./styles/reset"
 
 export const App = () => {
-  useEffect(() => {
-    const result = async () => {
-      try {
-        const { data } = await api.get("https://loteriascaixa-api.herokuapp.com/api/megasena/latest")
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    result();
-  }, [])
 
   return (
-    <Header />
+    <div className="App">
+      <GlobalReset />
+      <GlobalStyles />
+      <Dashboard />
+    </div>
   )
 }
