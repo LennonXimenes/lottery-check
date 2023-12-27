@@ -1,30 +1,12 @@
-# React + TypeScript + Vite
+# lottery-check
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Description:
+The Lottery Check app is designed to display the outcomes of Brazilian lotteries. Users can check the results of various lottery draws, along with the draw dates and corresponding draw numbers for each lottery event.
 
-Currently, two official plugins are available:
+Thanks to guto-alves for creating the API used in this project. For more details about the API, you can visit their GitHub repository [here](https://github.com/guto-alves/loterias-api).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+___
+Descrição do Projeto:
+O aplicativo Lottery Check foi desenvolvido para exibir os resultados das loterias brasileiras. Os usuários podem verificar os resultados de vários sorteios de loteria, juntamente com as datas dos sorteios e os números correspondentes para cada evento de loteria.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Agradeço ao @guto-alves por criar a API utilizada neste projeto. Para mais detalhes sobre a API, você pode acessar o repositório dele no GitHub [aqui](https://github.com/guto-alves/loterias-api).
