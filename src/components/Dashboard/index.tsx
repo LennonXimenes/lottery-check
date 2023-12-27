@@ -3,7 +3,7 @@ import { ILotteries } from "../../providers/@types";
 import { LotteryContext } from "../../providers/LotteryContext";
 import { StyledBox } from "./styled";
 import logo from "../../assets/Logo_Sena.png";
-import { FontParagraph } from "../../styles/typograph";
+import { FontLabel, FontParagraph } from "../../styles/typograph";
 
 export const Dashboard = () => {
     const [background, setBackground] = useState<string>("");
@@ -35,13 +35,17 @@ export const Dashboard = () => {
                     <FontParagraph font="big">{selectedLottery.toUpperCase()}</FontParagraph>
                 </div>
 
-                <FontParagraph>Concurso: {result?.concurso} - {result?.data}</FontParagraph>
+                <FontLabel>Concurso: {result?.concurso} - {result?.data}</FontLabel>
 
             </section>
 
             <section className="numbersDrawn">
                 {result && (
-                    <FontParagraph>{results?.join(" - ")}</FontParagraph>
+                    <div>
+                        {results?.map((numero, index) => (
+                            <FontParagraph color="black" key={index}>{numero}</FontParagraph>
+                        ))}
+                    </div>
                 )}
             </section>
         </StyledBox>

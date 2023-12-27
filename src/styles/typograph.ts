@@ -12,6 +12,12 @@ export const FontTitle = styled.h1`
 
 export const FontParagraph = styled.p`
     ${fonts};
-    font-size: ${({font}) => font === "big" ? "2rem" : "1rem"};
+    font-size: ${({font}) => font === "big" ? "1.5rem" : "1rem"};
+    color: ${({color}) => color === "black" ? "black" : "white"};
+`
+
+export const FontLabel = styled.p`
+    ${fonts};
+    font-size: ${({font}) => font === "big" ? "1.5rem" : "1rem"};
     color: var(--color-white);
 `

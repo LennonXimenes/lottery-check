@@ -22,11 +22,18 @@ export const StyledBox = styled.main`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    background-color: ${({ background }) => (background ? colorMap[background] : "black")};
-    
+   
     .infoLottery {    
-        
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        background-color: ${({ background }) => (background ? colorMap[background] : "black")};
+
         select {
             height: 3rem;
             width: 14rem;
@@ -45,7 +52,7 @@ export const StyledBox = styled.main`
 
         div {
             height: auto;
-            width: auto;
+            width: 100%;
 
             display: flex;
             flex-direction: row;
@@ -59,12 +66,64 @@ export const StyledBox = styled.main`
         
     }
 
-
     .numbersDrawn {
+        height: 100%;
+        width: 100%;
 
-        p {
-            color: var(--color-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: var(--color--grey-1);
+        
+        div {
+            height: 90%;
+            width: 100%;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                height: 2.5rem;
+                width: 2.5rem;
+
+                display: inline-block;
+                justify-content: center;
+
+                border: .1rem solid var(--color-white);
+                border-radius: 50%;
+                background-color: var(--color-white);
+
+                padding: 0.31rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+
+                text-align: center;
+                line-height: 1.875rem;
+                font-weight: 900;
+            }       
         }
     }
 
+    @media (min-width: 769px) {
+        height: 100vh;
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .numbersDrawn {
+        height: 100%;
+        width: 100%;
+        
+        div {
+            height: 50%;
+            width: 100%;
+        }
+    }
 `
